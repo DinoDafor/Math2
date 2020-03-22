@@ -36,9 +36,9 @@ public class Calculation {
                 result = result * h;
                 break;
 
-            case 5:
+            case 4:
                 for (int i = 1; i < steps + 1; i++) {
-                    result = result + calculateFifthFunction(low + h * i);
+                    result = result + calculateFourthFunction(low + h * i);
                 }
                 result = result * h;
                 break;
@@ -73,9 +73,9 @@ public class Calculation {
                 result = result * h;
                 break;
 
-            case 5:
+            case 4:
                 for (int i = 0; i < steps; i++) {
-                    result = result + calculateFifthFunction(low + h * i);
+                    result = result + calculateFourthFunction(low + h * i);
                 }
                 result = result * h;
                 break;
@@ -110,9 +110,9 @@ public class Calculation {
                 result = result * h;
                 break;
 
-            case 5:
-                for (int i = 0; i < steps; i++) {
-                    result = result + calculateFifthFunction(low + h * i + h / 2);
+            case 4:
+                for (int i = 0; i < steps; i++) {// второго рода в 0
+                    result = result + calculateFourthFunction(low + h * i + h / 2);
                 }
                 result = result * h;
                 break;
@@ -186,7 +186,7 @@ public class Calculation {
         return Math.sin(x);
     }
 
-    private double calculateFifthFunction(double x) {
+    private double calculateFourthFunction(double x) {
         return 1 / x;
     }
 

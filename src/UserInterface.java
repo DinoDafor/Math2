@@ -8,11 +8,10 @@ public class UserInterface {
         System.out.println("1. x^2");
         System.out.println("2. Cos(x)");
         System.out.println("3. Sin(x)");
-        System.out.println("4. 5^x");
-        System.out.println("5. 1/x");
+        System.out.println("4. 1/x");
         calculation.setNumberOfFunction(Integer.parseInt(in.next().trim()));
 
-        if (calculation.getNumberOfFunction() > 5 || calculation.getNumberOfFunction() < 1) {
+        if (calculation.getNumberOfFunction() > 4 || calculation.getNumberOfFunction() < 1) {
             throw new IllegalArgumentException("Выберите только те функции, которые присутствуют на экране.");
         }
 
