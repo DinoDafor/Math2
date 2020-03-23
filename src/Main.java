@@ -16,6 +16,9 @@ public class Main {
             catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
+            catch (ArithmeticException e) {
+                System.out.println("Неустранимый разрыв второго рода в области интегрирования.");
+            }
         }
 
 

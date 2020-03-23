@@ -38,6 +38,9 @@ public class Calculation {
 
             case 4:
                 for (int i = 1; i < steps + 1; i++) {
+                    if (low + h * i == 0) {
+                        throw new ArithmeticException();
+                    }
                     result = result + calculateFourthFunction(low + h * i);
                 }
                 result = result * h;
@@ -75,6 +78,9 @@ public class Calculation {
 
             case 4:
                 for (int i = 0; i < steps; i++) {
+                    if (low + h * i == 0) {
+                        throw new ArithmeticException();
+                    }
                     result = result + calculateFourthFunction(low + h * i);
                 }
                 result = result * h;
@@ -112,6 +118,9 @@ public class Calculation {
 
             case 4:
                 for (int i = 0; i < steps; i++) {// второго рода в 0
+                    if (low + h * i + h / 2 == 0) {
+                        throw new ArithmeticException();
+                    }
                     result = result + calculateFourthFunction(low + h * i + h / 2);
                 }
                 result = result * h;
